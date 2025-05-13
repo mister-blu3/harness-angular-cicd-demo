@@ -1,6 +1,6 @@
 replicaCount: 2
 image:
-  repository: ikurtz-angular-frontend/tour-of-heroes
+  repository: ikurtzangularfrontend/tour-of-heroes
   tag: latest
   pullPolicy: IfNotPresent
 service:
