@@ -1,6 +1,6 @@
 replicaCount: 2
 image:
-  repository: <your-docker-repo>/tour-of-heroes
+  repository: ikurtz-angular-frontend/tour-of-heroes
   tag: latest
   pullPolicy: IfNotPresent
 service:
@@ -11,7 +11,7 @@ ingress:
   className: nginx
   annotations: {}
   hosts:
-    - host: tourofheroes.example.com
+    - host: ikurtz-tourofheroes.canary-demos.io
       paths:
         - path: /
           pathType: Prefix
