@@ -1,0 +1,18 @@
+replicaCount: 2
+image:
+  repository: <your-docker-repo>/tour-of-heroes
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: true
+  className: nginx
+  annotations: {}
+  hosts:
+    - host: tourofheroes.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
